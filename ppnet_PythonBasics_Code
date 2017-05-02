@@ -1,0 +1,200 @@
+
+#Video 3/68 - Print Function and Strings
+print('Hello World!')
+print('We\'re going to the store')#'\' - escapes functionaluty og the succeding character
+print('Hello '+'World!')
+print('Hi','there')
+print('Hi',5)
+print('Hi'+5)#throws error
+print('Hi '+str(5))
+print(float('8.0')+5)
+
+#Video 4/68 - Math
+4**2#4 raised to 2
+
+#Video 5/68 - Variables
+example_var = 55
+print(example_var)
+example_var = 'text'
+print(example_var)
+x, y = (3, 5)#unpacking
+print(x)
+
+#Video 6/68 = while loop
+condition = 1
+while condition < 10:
+    print(condition)
+    condition += 1
+while True:
+    print('Infinite loop')
+    
+#Video 7/68 - For loop
+exampleList = [1,3,4,5,4,5,2,3]
+for eachNumber in exampleList:
+    print(eachNumber)
+
+    print('continue program')
+print('continue program')
+
+for x in range(1,11):
+    print(x)
+
+#Video 8/68 - If statement
+x = 5
+y = 8
+z = 5
+
+if x < y:
+    print('x is less than y')
+    
+if x < y > z:
+    print('x is less than y and y is greater than z')
+    
+#Video 9/68 - If else statement
+if x > y:
+    print('x greater than y')
+else:
+    print('x is less than y')
+    
+#Video 10/68 = if elif else statement
+if x > y:
+    print('x > y')
+elif x == y:
+    print('x = y')
+else:
+    print('if elif did not run')
+    
+#Video 11/68 - Functions
+def example():
+    print('basic function')
+    z = 1+2
+    print(z)
+
+#Video 12/68 - Function parameters
+def add(num1, num2):
+    answer = num1 + num2
+    print('num1 and num2 are', num1, num2)
+    print('addition = ', answer)
+
+#Video 13/68 - Function paramenter defaults
+def add(num1, num2 = 5):
+    answer = num1 + num2
+    print('num1 and num2 are', num1, num2)
+    print('addition = ', answer)
+
+add(1)
+
+#Video 14/68 - Global and local variables
+x = 6
+
+def example():
+    global x
+    x+=5
+    print(x)
+    return x
+
+def example():
+    globx = x
+    print(globx)
+    globx += 5
+    print(globx)
+    return globx
+
+x = example()
+
+#Video 15/68 - Installing modules
+#Download tarball
+#Extract the tarball until setup.py is visible
+#Open command window over the extracted folder
+#Type setup.py install
+
+#Video 16/68 - How to download and install Python Packages and Modules with Pip
+#for 32 bit versions - in cmd type - pip install <module name>
+#in case more than one python versions are installed give full path of pip while calling in cmd
+
+#Video 17/68 - Common errors
+#Indentation
+#Varable naming
+#Unattended EOLs
+
+#Video 18/68 - Writing to a file
+text = 'Sampel text\nNew Line!'
+saveFile = open('examplefile1.txt', 'w')#Creates/Opens a file and specifies the intention of opening iy
+#in this case to write data to that file
+saveFile.write(text)
+saveFile.close()
+
+#Video 19/68 - Appending Files
+appendMe = '\nAppend this'
+appendFile = open('examplefile1.txt', 'a')
+appendFile.write(appendMe)
+appendFile.close()
+
+#Video 20/68 - Reading from a file
+readMe = open('examplefile1.txt', 'r').read()
+readMe = open('examplefile1.txt', 'r').readlines()
+print(readMe)
+#rough
+test = open('exampleFile1.txt', 'a')
+test.write('\tTab')
+test.close()
+test = open('exampleFile1.txt', 'r').readlines()
+print(test)
+#rough
+
+#Video 21/68 - Classes
+class calculator:
+    def addition(x, y):
+        add = x+y
+        print(add)
+    def substraction(x,y):
+        sub = x - y
+        print(sub)
+    def multiplication(x,y):
+        mult = x*y
+        print(mult)
+    def division(x,y):
+        div = x/y
+        print(div)
+calculator.addition(3,5)
+
+#Video 22/68
+#shebang line - to call the interpreter of python if the script is executable
+#module starts here
+def epic():
+    print('Wooah!')
+if __name__ == '__main__':
+    print('main module')
+    #stuff to be run only when the module is being edited
+#module ends here
+
+import epicmodule
+
+epicmodule.epic()
+
+#Video 23/68 - use input
+x  =input('What\'s your name? ')
+print('What\'s up ',x)
+y = input()
+if y == 'Nothin':
+    print('Then get working!')
+else:
+    print('Don\'t fool around then!')
+    
+#Video 24/68 - statistics
+import statistics
+
+exampleList = [1,3,4,2,33,34,45,3,2,54,2]
+x = statistics.mean(exampleList)
+y = statistics.median(exampleList)
+
+#Video 25/68 - importing modules
+import statistics as s
+from statistics import *
+from statistics import variance as v, mean as m
+x = v(exampleList)
+y = m(exampleList)
+print(x,y)
+
+#Video 26/38 - making modules
+#store newly created modles in lib/site-packages
