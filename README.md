@@ -1,10 +1,10 @@
 [Understanding self and __init__ method in python Class](https://micropyramid.com/blog/understand-self-and-__init__-method-in-python-class/)
 
-** self :
+* self :
 
 self represents the instance of the class. By using the "self" keyword we can access the attributes and methods of the class in python.
 
-** __init__ :
+* __init__ :
 
 "__init__" is a reseved method in python classes. It is known as a constructor in object oriented concepts. This method called when an object is created from the class and it allow the class to initialize the attributes of a class
 
